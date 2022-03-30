@@ -1,0 +1,39 @@
+<!-- <div *ngIf="courses.length>0; then courseLIst else noCourses ">
+    Courses are :
+</div>
+<ng-template #courseLIst>
+    List of courses!
+</ng-template>
+<ng-template #noCourses>
+    No courses are present
+</ng-template> -->
+
+<!-- ng hidden################# -->
+<!-- <div [hidden]="courses.length==0">
+    List of courses
+</div>
+<div [hidden]="courses.length>0">
+    No courses yet
+</div> -->
+<!-- //#############NG switch case -->
+<!-- 
+<ul class="nav nav-pills">
+    <li><a (click)="viewMode='map'">Map view</a></li>
+    <li>
+        <a (click)="viewMode='list'">List View</a>
+    </li>
+</ul>
+<div [ngSwitch]="viewMode">
+
+    <div *ngSwitchCase="'map'">Map view comp</div>
+    <div *ngSwitchCase="'list'">List view comp</div>
+    <div *ngSwitchDefault>Otherwise</div>
+</div> -->
+
+<!-- #### NG for -->
+<button (click)="addNew()">Add</button>
+<ul>
+    <li *ngFor="let course of courses; even as isEven_local">
+        {{course.name}} <span *ngIf="isEven_local">(EVEN)</span>
+    </li>
+</ul>
